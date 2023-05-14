@@ -1,0 +1,63 @@
+@import "./../../sass/abstracts/variables";
+.hero {
+   
+    background-image:linear-gradient( rgba(#000, 0.02), rgba(#000, 0.02) ), url(./../../assets/img/back.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $color-white;
+    font-size: 1.6rem;
+    &Container {
+        height: 100vh;
+        max-width: 120rem;
+        padding: 12rem 3rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40rem,1fr ));
+       
+        align-items: center;
+    }
+    &Heading {
+        grid-column: 1/-1;
+        justify-self: center;
+        font-size: 3.6rem;
+        font-weight: 400;
+    }
+    &Img {
+        width: 100%;
+        flex: 1;
+    }
+    &Info {
+        flex: 1;
+        display: grid;
+        row-gap: 1.5rem;
+    }
+    &Name {
+        font-size: 1.8rem;
+        
+    }
+    &Btn {
+        &:link, &:visited {
+            margin-top: 2rem;
+            padding: 2rem 5rem;
+            justify-self: center;
+            border: none;
+            border-radius: 10rem;
+            background-color: transparent;
+            background-image: linear-gradient(to left , $color-primary, $color-secondary);
+            color: $color-white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        &:hover {
+            transform: translateY(-3px) scale(1.005);
+            box-shadow: 0 0.5rem 2rem rgba($color: $color-white, $alpha: 0.2);
+            background-image: linear-gradient(to right , $color-primary, $color-secondary);
+        }
+        &:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 0.5rem 0.5rem rgba($color: $color-white, $alpha: 0.2);
+        }
+    }
+}
